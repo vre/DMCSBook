@@ -1,38 +1,35 @@
-# Setup
-title: Distributed Machine Control Systems Book
-tagline: Your Website Tagline
-url: https://devpractical.com
-paginate: 3
-baseurl: ""
-permalink: pretty
-
-# Gems
-plugins:
-  - jekyll-gist
-  - jekyll-paginate
-  - jekyll-seo-tag
-
-# Optimize Jekyll
 exclude:
-  - .editorconfig
-  - .git
-  - .jekyll-cache
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE.md
-  - README.md
+  - "/vendor/"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "README.md"
+  - "LICENSE.md"
+  - "*.gemspec"
 
-sass:
-  sass_dir: _sass
-  style: :compressed
+keep_files:
+  - "CNAME"
+  - ".git"
+  - ".gitignore"
 
-# Options
+# Site settings
+title: DMCSBook
+subtitle: "A free HTML5 agency template"
+url: "http://ndrewtl.github.io" # the base hostname & protocol for your site
+# baseurl: "/the/subpath/of/your/site" # Set this value to "" if you want your site to be root
+baseurl: "/airspace-jekyll"
+cover: "/assets/cover.png"
+logo: "/assets/logo.png"
 
-# Specify the author for blog posts
-author:
-  name: Avic Ndugu
-  url: https://https://twitter.com/_ndugu
-  email: avicndugu1234@gmail.com
+# Build settings
+markdown: kramdown
 
-# Custom vars
-version: 3.0.0
+# Google analytics
+# ga_tracking_id: "UA-XXXX-1"
+
+# Category descriptions (for archive pages)
+descriptions:
+  - cat: jekyll
+    desc: "Posts describing Jekyll setup techniques."
+
+  - cat: dummy
+    desc: "Just some placeholder posts, lorem ipsum and the rest."

@@ -1,19 +1,52 @@
-# Jekyll on Replit
+# Airspace Jekyll
 
-This is a styled Jekyll template to get you started with Jekyll static site generator on Replit. It's ready to go so you can just hit run and start coding!
+Airspace Jekyll Creative Agency Template ported from [Airspace HTML Template](https://themefisher.com/products/airspace/)
 
-The template uses the regular method of adding themes instead of gem-based themes. If you prefer using the gem-based themes use [Jekyll gem-based template](https://replit.com/@AvicNdugu/Jekyll-Using-Gem-base-Theme) instead. For those who want a barebone Jekyll theme without any styling, use [Barebone Jekyll template](https://replit.com/@AvicNdugu/Jekyll).
+![airspace](https://demo.themefisher.com/thumbnails/airspace.png)
 
-## Running the repl
+## Setup
 
-Simply hit run!
+To start your project, fork this repository
+After forking the repo, your site will be live immediately on your personal Github Pages account, e.g. `https://yourusername.github.io/your-repo-name/`.
 
-## Installing Additional packages
+Make sure GitHub Pages is enabled for your repo. It might take some time for the site to propagate entirely.
 
-To add packages to your Jekyll repl, we recommend using the Replit packager interface in the left sidebar or using `bundle install` in the shell. Check out the [Bundle docs here](https://bundler.io/v2.3/#getting-started).
+## Customize
 
-To add a regular theme, find the desired theme on jekyll themes website. Then add the necessary folders(_layouts, _data, and _include) and files in the main home directory from the theme. Add your posts in the _posts directory.
+Things you can customize in `_data/settings.yml` (no HTML/CSS):
 
-## Help
+- Theme General Settings ( name, logo, email, phone, address )
+- Hero Section
+- About Section
+- Team Section
+- Skills Section
+- Experience Section
+- Education Section
+- Services Section
+- Portfolio Section
+- Testimonials Section
+- Client Slider Section
+- Contact Section
 
-If you need help you might be able to find an answer on [Jekyll docs](https://jekyllrb.com/) For help on Replit, visit [Replit docs](https://docs.replit.com) page. Feel free to report bugs and give us feedback [here](https://replit.com/support).
+## Deployment
+
+To run the theme locally, navigate to the theme directory and run `bundle install` to install the dependencies, then run `jekyll serve` or `bundle exec jekyll serve` to start the Jekyll server.
+I would recommend checking the [Deployment Methods](https://jekyllrb.com/docs/deployment-methods/) page on Jekyll's website.
+
+## Reporting Issues
+
+We use GitHub Issues as the official bug tracker for **Airspace**. Please Search [existing issues](https://github.com/themefisher/airspace-jekyll/issues). It’s possible someone has already reported the same problem.
+If your problem or idea is not addressed yet, [open a new issue](https://github.com/themefisher/airspace-jekyll/issues/new)
+
+## Technical Support or Questions
+
+If you have questions or need help integrating the product please [contact us](mailto:themefisher@gmail.com) instead of opening an issue.
+
+<!-- licence -->
+## License
+
+Copyright (c) 2016 - Present, Designed & Developed by [Themefisher](https://themefisher.com)
+
+**Code License:** Released under the [MIT](https://github.com/themefisher/airspace-jekyll/blob/main/LICENSE) license.
+
+**Image license:** The images are only for demonstration purposes. They have their license, we don't have permission to share those images.
