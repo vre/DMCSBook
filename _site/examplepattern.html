@@ -99,7 +99,7 @@
       <div class="col-md-12">
         <div class="block">
           <h1>Example pattern</h1>
-          <p>Here you'll find an example pattern from the book. This pattern is called separate real-time</p>
+          <p>Here you'll find an example pattern from the book. This pattern is called <span class="smallcaps">Separate Real-time</span</p>
         </div>
       </div>
     </div>
@@ -107,16 +107,16 @@
 </section>
 
   <div class="container">
-<h2>Separate Real-time **</h2>
+<h2><span class="smallcaps">Separate Real-time **</span></h2>
 <br/>
 <p>
-..there is a distributed CONTROL SYSTEM where ISOLATED FUNCTIONALITIES pattern has been applied. Thus, there are multiple nodes in the system. Single node's functionality can be implemented by one or more applications. Some functionalities are related to controlling the machine while high level functionalities are related to offering the machine operator graphical user interface or for example, communicating with other remote systems via REMOTE ACCESS. These high level functionalities might need a lot of resources and their time consumption is unpredictable. On the other hand, the machine controlling functionalities typically have strict real-time requirements and their response times should be deterministic. High level functionality requires data from the machine control to implement its responsibility. For example, DIAGNOSTICS application requires data from the nodes in the system. Thus, the high level functionalities need to exchange information with machine control level. If high level functionality is implemented on the same node with the machine control functionality, the fulfillment of real-time requirements needs to be guaranteed somehow.
+...there is a distributed <span class="smallcaps">Control System</span> where <span class="smallcaps">Isolated Functionalities</span> pattern has been applied. Thus, there are multiple nodes in the system. Single node's functionality can be implemented by one or more applications. Some functionalities are related to controlling the machine while high level functionalities are related to offering the machine operator graphical user interface or for example, communicating with other remote systems via <span class="smallcaps">Remote Access</span>. These high level functionalities might need a lot of resources and their time consumption is unpredictable. On the other hand, the machine controlling functionalities typically have strict real-time requirements and their response times should be deterministic. High level functionality requires data from the machine control to implement its responsibility. For example, <span class="smallcaps">Diagnostics</span> application requires data from the nodes in the system. Thus, the high level functionalities need to exchange information with machine control level. If high level functionality is implemented on the same node with the machine control functionality, the fulfillment of real-time requirements needs to be guaranteed somehow.
 </p>
     <div class="text-center">
       <img src="/img/separate_realtime_icon.jpg" width="350px" class="rounded mx-auto d-block">  
     </div>
     <p style="font-weight:bold;">
-    There always are machine control functionalities in the system. Additionally, to increase productivity and operability of the machine, the system needs to offer high level functionality such as graphical user interface, DIAGNOSTICS, etc. These high level functionalities behavior may compromise the real-time requirements of the machine control functionalities.</p>
+    There always are machine control functionalities in the system. Additionally, to increase productivity and operability of the machine, the system needs to offer high level functionality such as graphical user interface, <span class="smallcaps">Diagnostics</span>, etc. These high level functionalities behavior may compromise the real-time requirements of the machine control functionalities.</p>
 
 <p>
 Real-time applications must meet their timing requirements or otherwise they are considered to be malfunctioning. Thus real-time functionality must not be interfered by other functionality of the system. Typically, the response times of real-time applications range from a few milliseconds to couple of hundred milliseconds and sometimes they can be only few hundred microseconds or even less. On the other hand, high level functionalities do not have strict real-time requirements and response time of seconds is enough. However, high level functionalities may consume resources, e.g. CPU time from the real-time part and cause it to malfunction, i.e. not to meet its real-time requirements, if these two are run on parallel on the same hardware. This kind of behavior could lead to hazardous situations.</p>
@@ -135,18 +135,22 @@ Therefore:<br />
 Divide the system into separate levels according to real-time requirements: e.g. to machine control and to machine operator level. Real-time functionalities are located on the machine control level and non-real-time functionality on the machine operator level. Levels can not interfere with each other as they use message bus or other medium to communicate with each other.
 </p>
 <p>
-      This real-time separation means that all applications having real-time requirements are logically placed on the same level, i.e. machine control level. Despite of this logical division, the applications can still reside on different nodes taking care of ISOLATED FUNCTIONALITIES. Furthermore, there might be multiple applications running on the same node, but all of those applications are either real-time or non-real-time applications. All non-real-time applications are placed on the operator level and real-time applications on machine control level. Operator level applications should not be able to directly control any actuators and directly cause movements. Operator level applications are typically run on the PC which resides in the cabin of the machine while machine control applications are run on their own dedicated controller, e.g. PLC.
+      This real-time separation means that all applications having real-time requirements are logically placed on the same level, i.e. machine control level. Despite of this logical division, the applications can still reside on different nodes taking care of <span class="smallcaps">Isolated Functionalities</span>. Furthermore, there might be multiple applications running on the same node, but all of those applications are either real-time or non-real-time applications. All non-real-time applications are placed on the operator level and real-time applications on machine control level. Operator level applications should not be able to directly control any actuators and directly cause movements. Operator level applications are typically run on the PC which resides in the cabin of the machine while machine control applications are run on their own dedicated controller, e.g. PLC.
     </p>
     <div class="text-center">
-      <img src="/img/separate_realtime_solution1.jpg" width="350px" class="rounded mx-auto d-block">
-      Figure 60 - Example architecture of a system where SEPARATE REAL-TIME has been applied
+      <img src="/img/separate_realtime_solution1.jpg" width="350px" class="rounded mx-auto d-block"><br>
+      Figure 60 - Example architecture of a system where <span class="smallcaps">Separate Real-time</span> has been applied<br><br >
     </div>    
 
-    <div class="fadebox">
+<div class="fadebox">
     <p>
       Emergency stop can be implemented as its own level. Usually it is implemented purely with hardware and it is used to switch the power off from the machine control level and inform the other levels that emergency stop has been activated. Now, the rest of the system can make according state changes (see OPERATING MODES) and inform the machine operator. If emergency stop is implemented as its own level, other safety certified functionalities can be placed on the same level. On the other hand, if emergency stop is implemented on machine control level, it usually means that the whole machine control level needs to be safety certified.
     </p>
-    </div>
+   <p class="buythebook"><a href="https://www.amazon.com/Designing-Distributed-Control-Systems-Language/dp/1118694155/" class="buylink">Buy the book</a></p>
+</div>
+
+    <br >
+    <br >
   </div>
 
 

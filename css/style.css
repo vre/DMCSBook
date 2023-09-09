@@ -52,14 +52,28 @@
   position: relative;
   overflow: hidden;
 }
-.fadebox .read-more { 
+.fadebox .buythebook { 
   position: absolute; 
   bottom: 0; 
   left: 0;
   width: 100%; 
   text-align: center; 
-  margin: 0; padding: 30px 0; 
+  margin: 0; padding: 50px 0; 
 	
   /* "transparent" only works here because == rgba(0,0,0,0) */
-  background-image: linear-gradient(to bottom, transparent, black);
+  background-image: linear-gradient(to bottom, transparent, white);
 }
+
+.buylink {
+  background-color: #ddd;
+  color:black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 2px 4px darkslategray;
+  border-radius: 10%;
+  font-weight:bold;
+}
+
+span.smallcaps {font-variant:small-caps;}
