@@ -11,7 +11,7 @@ permalink: /
       <div class="col-md-10 col-md-offset-2">
         <div class="block">
           <h1 class="animated fadeInUp">Designing Distributed Control Systems:<br>A Pattern Language Approach </h1>
-          <p class="animated fadeInUp">We love the Web and the work we do. We work closely with our clients to deliver the best possible solutions for their needs</p>
+          <p class="animated fadeInUp">We love the embedded distributed systems.</p>
         </div>
       </div>
     </div>
@@ -19,87 +19,17 @@ permalink: /
 </section>
 <!-- Wrapper Start -->
 <section id="intro">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-7 col-sm-12">
-        <div class="block">
-          <div class="section-title">
-            <h2>About Us</h2>
-            <p>Veli-Pekka Eloranta</p>
-            <p>Ville Reijonen</p>
-              <p>Johannes Koskinen</p>
-            <p>Marko Leppänen was born in 1979 in Finland. He aqcuired his M.Sc. in Electrical Engineering in 2004 at Tampere University of Technology, where he spent the next decade as a researcher, culminating in doctorate in 2017 at the same university. A great part of his research done with the heavy industry revolves around patterns and machines as shocased by the book "Designing Distributed Control Systems: A Pattern Language Approach" by Wiley.</p>
-          </div>
-          <p>Designing Distributed Control Systems offers 80 tried-and-tested design patterns for creating efficient distributed machine control software. Derived from industry leaders' systems, these patterns address common challenges like long lifecycles, distribution, real-time operation, and fault tolerance. Each pattern presents a specific design problem along with solutions, trade-offs, and guidance for incremental design growth. Organized by problem categories, these patterns facilitate easy problem-solving. Quality aspects such as performance and extendibility are integrated into the pattern descriptions. The book includes an illustrative software architecture designed by industry experts using these patterns. This real-world example demonstrates how these patterns guide system design, benefiting both novices and experts. By utilizing these patterns, you can ensure high-quality machine control systems that meet evolving market demands for quality, maintenance ease, efficiency, productivity, and environmental considerations. Improve the quality and efficiency of your distributed control systems with these proven methodologies from our expert author team.</p>
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6">
+          <img src="{{ site.baseurl }}/img/kirjan_kansi.jpg" width="400px" class="mx-auto d-block"> 
         </div>
-      </div><!-- .col-md-7 close -->
-      <div class="col-md-5 col-sm-12">
-        <div class="block">
-          <img src="img/wrapper-img.png" alt="Img">
+        <div class="col-xl-6 col-lg-6 col-md-6">
+          <p>Designing Distributed Control Systems offers 80 tried-and-tested design patterns for creating efficient distributed machine control software. Derived from industry leaders' systems, these patterns address common challenges like long lifecycles, distribution, real-time operation, and fault tolerance. Each pattern presents a specific design problem along with solutions, trade-offs, and guidance for incremental design growth.</p>
+          <p>Organized by problem categories, these patterns facilitate easy problem-solving. Quality aspects such as performance and extendibility are integrated into the pattern descriptions. The book includes an illustrative software architecture designed by industry experts using these patterns. This real-world example demonstrates how these patterns guide system design, benefiting both novices and experts. 
+         <p>By utilizing these patterns, you can ensure high-quality machine control systems that meet evolving market demands for quality, maintenance ease, efficiency, productivity, and environmental considerations. Improve the quality and efficiency of your distributed control systems with these proven methodologies from our expert author team.</p>
         </div>
-      </div><!-- .col-md-5 close -->
-    </div>
-  </div>
-</section>
-
-<!-- Call to action Start -->
-<section id="call-to-action">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="block">
-          <h2>We design delightful digital experiences.</h2>
-          <p>Read more about what we do and our philosophy of design. Judge for yourself The work and results we’ve achieved for other clients, and meet our highly experienced Team who just love to design.</p>
-          <a class="btn btn-default btn-call-to-action" href="#" >Tell Us Your Story</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Content Start -->
-<section id="testimonial">
-  <div class="container">
-    <div class="row">
-      <div class="section-title text-center">
-        <h2>Fun Facts About Us</h2>
-        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        {% if site.data.funfacts.size > 0 %}
-        <div class="block">
-          {% for ff in site.data.funfacts %}
-          <ul class="counter-box clearfix">
-            <li>
-              <div class="block">
-                <i class="{{ ff.icon }}"></i>
-                <h4 class="counter">{{ ff.counter }}</h4>
-                <span>{{ ff.text }}</span>
-              </div>
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-        {% endif %}
-      </div>
-      <div class="col-md-6">
-        {% if site.data.testimonials.size > 0 %}
-        <div class="testimonial-carousel">
-          <div id="testimonial-slider" class="owl-carousel">
-            {% for tm in site.data.testimonials %}
-            <div>
-                <img src="img/cotation.png" alt="IMG">
-                <p>{{ tm.testimonial }}</p>
-                <div class="user">
-                  <img src="{{ tm.image }}" alt="Pepole">
-                  <p><span>{{ tm.name }}</span> {{ tm.title }}</p>
-                </div>
-            </div>
-            {% endfor %}
-          </div>
-        </div>
-        {% endif %}
       </div>
     </div>
   </div>
