@@ -46,4 +46,17 @@ As machinery directive in Section 1.2.4.3 (Machinery directive, 2006) states, th
 Therefore:<br />
 Divide the system into separate levels according to real-time requirements: e.g. to machine control and to machine operator level. Real-time functionalities are located on the machine control level and non-real-time functionality on the machine operator level. Levels can not interfere with each other as they use message bus or other medium to communicate with each other.
 </p>
+<p>
+      This real-time separation means that all applications having real-time requirements are logically placed on the same level, i.e. machine control level. Despite of this logical division, the applications can still reside on different nodes taking care of ISOLATED FUNCTIONALITIES. Furthermore, there might be multiple applications running on the same node, but all of those applications are either real-time or non-real-time applications. All non-real-time applications are placed on the operator level and real-time applications on machine control level. Operator level applications should not be able to directly control any actuators and directly cause movements. Operator level applications are typically run on the PC which resides in the cabin of the machine while machine control applications are run on their own dedicated controller, e.g. PLC.
+    </p>
+    <div class="text-center">
+      <img src="{{ site.baseurl }}/img/separate_realtime_solution1.jpg" width="350px" class="rounded mx-auto d-block">
+      Figure 60 - Example architecture of a system where SEPARATE REAL-TIME has been applied
+    </div>    
+
+    <div class="fadebox">
+    <p>
+      Emergency stop can be implemented as its own level. Usually it is implemented purely with hardware and it is used to switch the power off from the machine control level and inform the other levels that emergency stop has been activated. Now, the rest of the system can make according state changes (see OPERATING MODES) and inform the machine operator. If emergency stop is implemented as its own level, other safety certified functionalities can be placed on the same level. On the other hand, if emergency stop is implemented on machine control level, it usually means that the whole machine control level needs to be safety certified.
+    </p>
+    </div>
   </div>

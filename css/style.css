@@ -32,3 +32,34 @@
 .post-area a:hover {
   color: #0D0017;
 }
+
+.toc-list, .toc-list ol {
+  list-style-type: none;
+}
+
+.toc-list {
+  padding: 0;
+  font-size: 20px;
+}
+
+.toc-list ol {
+  padding-inline-start: 2ch;
+  font-size: 16px;
+}
+
+.fadebox {
+  max-height: 120px;
+  position: relative;
+  overflow: hidden;
+}
+.fadebox .read-more { 
+  position: absolute; 
+  bottom: 0; 
+  left: 0;
+  width: 100%; 
+  text-align: center; 
+  margin: 0; padding: 30px 0; 
+	
+  /* "transparent" only works here because == rgba(0,0,0,0) */
+  background-image: linear-gradient(to bottom, transparent, black);
+}

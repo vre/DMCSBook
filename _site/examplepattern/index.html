@@ -14,27 +14,27 @@
 <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
 <!-- CSS -->
-<link rel="stylesheet" href="/airspace-jekyll/css/owl.carousel.css" />
-<link rel="stylesheet" href="/airspace-jekyll/css/bootstrap.min.css" />
-<link rel="stylesheet" href="/airspace-jekyll/css/font-awesome.min.css" />
-<link rel="stylesheet" href="/airspace-jekyll/css/airspace.css" />
-<link rel="stylesheet" href="/airspace-jekyll/css/style.css" />
-<link rel="stylesheet" href="/airspace-jekyll/css/ionicons.min.css" />
-<link rel="stylesheet" href="/airspace-jekyll/css/animate.css" />
-<link rel="stylesheet" href="/airspace-jekyll/css/responsive.css" />
-<link rel="stylesheet" href="/airspace-jekyll/css/syntax.css" />
+<link rel="stylesheet" href="/css/owl.carousel.css" />
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/css/font-awesome.min.css" />
+<link rel="stylesheet" href="/css/airspace.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/ionicons.min.css" />
+<link rel="stylesheet" href="/css/animate.css" />
+<link rel="stylesheet" href="/css/responsive.css" />
+<link rel="stylesheet" href="/css/syntax.css" />
 
 <!-- Js -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-<script src="/airspace-jekyll/js/bootstrap.min.js"></script>
-<script src="/airspace-jekyll/js/owl.carousel.min.js"></script>
-<script src="/airspace-jekyll/js/plugins.js"></script>
-<script src="/airspace-jekyll/js/min/waypoints.min.js"></script>
-<script src="/airspace-jekyll/js/jquery.counterup.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/plugins.js"></script>
+<script src="/js/min/waypoints.min.js"></script>
+<script src="/js/jquery.counterup.js"></script>
 
 
-<script src="/airspace-jekyll/js/main.js"></script>
+<script src="/js/main.js"></script>
 
 <!--
 /*
@@ -69,17 +69,17 @@
             <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="index.html">
-              <img src="/airspace-jekyll/img/logo.jpg" width="20%" alt="Logo">
+              <img src="/img/logo.jpg" width="20%" alt="Logo">
             </a>
           </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="/airspace-jekyll/">Home</a>
-                <li><a href="/airspace-jekyll/book">Book</a></li>
-                <li><a href="/airspace-jekyll/authors">Authors</a></li>
-                <li><a href="/airspace-jekyll/reviews">Reviews</a></li>
-                <li><a href="/airspace-jekyll/contact">Contact</a>
+                <li><a href="/">Home</a>
+                <li><a href="/book">Book</a></li>
+                <li><a href="/authors">Authors</a></li>
+                <li><a href="/reviews">Reviews</a></li>
+                <li><a href="/contact">Contact</a>
                 <li><a href="https://www.amazon.com/Designing-Distributed-Control-Systems-Language/dp/1118694155/">Buy book</a></li>
               </ul>
             </div><!-- /.navbar-collapse -->
@@ -113,7 +113,7 @@
 ..there is a distributed CONTROL SYSTEM where ISOLATED FUNCTIONALITIES pattern has been applied. Thus, there are multiple nodes in the system. Single node's functionality can be implemented by one or more applications. Some functionalities are related to controlling the machine while high level functionalities are related to offering the machine operator graphical user interface or for example, communicating with other remote systems via REMOTE ACCESS. These high level functionalities might need a lot of resources and their time consumption is unpredictable. On the other hand, the machine controlling functionalities typically have strict real-time requirements and their response times should be deterministic. High level functionality requires data from the machine control to implement its responsibility. For example, DIAGNOSTICS application requires data from the nodes in the system. Thus, the high level functionalities need to exchange information with machine control level. If high level functionality is implemented on the same node with the machine control functionality, the fulfillment of real-time requirements needs to be guaranteed somehow.
 </p>
     <div class="text-center">
-      <img src="/airspace-jekyll/img/separate_realtime_icon.jpg" width="350px" class="rounded mx-auto d-block">  
+      <img src="/img/separate_realtime_icon.jpg" width="350px" class="rounded mx-auto d-block">  
     </div>
     <p style="font-weight:bold;">
     There always are machine control functionalities in the system. Additionally, to increase productivity and operability of the machine, the system needs to offer high level functionality such as graphical user interface, DIAGNOSTICS, etc. These high level functionalities behavior may compromise the real-time requirements of the machine control functionalities.</p>
@@ -134,6 +134,19 @@ As machinery directive in Section 1.2.4.3 (Machinery directive, 2006) states, th
 Therefore:<br />
 Divide the system into separate levels according to real-time requirements: e.g. to machine control and to machine operator level. Real-time functionalities are located on the machine control level and non-real-time functionality on the machine operator level. Levels can not interfere with each other as they use message bus or other medium to communicate with each other.
 </p>
+<p>
+      This real-time separation means that all applications having real-time requirements are logically placed on the same level, i.e. machine control level. Despite of this logical division, the applications can still reside on different nodes taking care of ISOLATED FUNCTIONALITIES. Furthermore, there might be multiple applications running on the same node, but all of those applications are either real-time or non-real-time applications. All non-real-time applications are placed on the operator level and real-time applications on machine control level. Operator level applications should not be able to directly control any actuators and directly cause movements. Operator level applications are typically run on the PC which resides in the cabin of the machine while machine control applications are run on their own dedicated controller, e.g. PLC.
+    </p>
+    <div class="text-center">
+      <img src="/img/separate_realtime_solution1.jpg" width="350px" class="rounded mx-auto d-block">
+      Figure 60 - Example architecture of a system where SEPARATE REAL-TIME has been applied
+    </div>    
+
+    <div class="fadebox">
+    <p>
+      Emergency stop can be implemented as its own level. Usually it is implemented purely with hardware and it is used to switch the power off from the machine control level and inform the other levels that emergency stop has been activated. Now, the rest of the system can make according state changes (see OPERATING MODES) and inform the machine operator. If emergency stop is implemented as its own level, other safety certified functionalities can be placed on the same level. On the other hand, if emergency stop is implemented on machine control level, it usually means that the whole machine control level needs to be safety certified.
+    </p>
+    </div>
   </div>
 
 
