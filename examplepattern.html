@@ -1,0 +1,49 @@
+---
+layout: page
+title: Example pattern
+permalink: /examplepattern/
+---
+
+<!-- Slider Start -->
+<section id="global-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h1>Example pattern</h1>
+          <p>Here you'll find an example pattern from the book. This pattern is called separate real-time</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <div class="container">
+<h2>Separate Real-time **</h2>
+<br/>
+<p>
+..there is a distributed CONTROL SYSTEM where ISOLATED FUNCTIONALITIES pattern has been applied. Thus, there are multiple nodes in the system. Single node's functionality can be implemented by one or more applications. Some functionalities are related to controlling the machine while high level functionalities are related to offering the machine operator graphical user interface or for example, communicating with other remote systems via REMOTE ACCESS. These high level functionalities might need a lot of resources and their time consumption is unpredictable. On the other hand, the machine controlling functionalities typically have strict real-time requirements and their response times should be deterministic. High level functionality requires data from the machine control to implement its responsibility. For example, DIAGNOSTICS application requires data from the nodes in the system. Thus, the high level functionalities need to exchange information with machine control level. If high level functionality is implemented on the same node with the machine control functionality, the fulfillment of real-time requirements needs to be guaranteed somehow.
+</p>
+    <div class="text-center">
+      <img src="{{ site.baseurl }}/img/separate_realtime_icon.jpg" width="350px" class="rounded mx-auto d-block">  
+    </div>
+    <p style="font-weight:bold;">
+    There always are machine control functionalities in the system. Additionally, to increase productivity and operability of the machine, the system needs to offer high level functionality such as graphical user interface, DIAGNOSTICS, etc. These high level functionalities behavior may compromise the real-time requirements of the machine control functionalities.</p>
+
+<p>
+Real-time applications must meet their timing requirements or otherwise they are considered to be malfunctioning. Thus real-time functionality must not be interfered by other functionality of the system. Typically, the response times of real-time applications range from a few milliseconds to couple of hundred milliseconds and sometimes they can be only few hundred microseconds or even less. On the other hand, high level functionalities do not have strict real-time requirements and response time of seconds is enough. However, high level functionalities may consume resources, e.g. CPU time from the real-time part and cause it to malfunction, i.e. not to meet its real-time requirements, if these two are run on parallel on the same hardware. This kind of behavior could lead to hazardous situations.</p>
+<p>
+It should be possible to have separate teams developing the real-time functionality and high level services. Different developers and teams have different skill sets and are specialized in the development of certain kind of applications. Thus subsetability of the software should be supported by the architecture. Furthermore, different programming languages are normally used in the development of real-time applications than in development of high level services. If different teams can be working on different parts of the system, the tool chain that needs to be installed can be limited to only the parts that team is working on.</p>
+    <p>
+In many cases, the high end services are resource greedy and need more processing power than real-time functionality needs. It should be possible to use common low-end hardware in order to save costs for the machine control, but on the other hand, there is a need for high level services and these services would require more sophisticated hardware. This kind of hardware is more error-prone under harsh conditions where the machine is used, so it might not be suitable for machine control applications.</p>
+<p>
+High end services are not mission critical from the machine operator's point of view. They provide additional value, but are not required to control the machine. Malfunction of a high level functionality should not affect the availability of the machine and under any circumstances high level functionality’s malfunction should not prevent the operator from using the machine.
+  </p>
+<p>
+As machinery directive in Section 1.2.4.3 (Machinery directive, 2006) states, the emergency stop of the system must stop the hazardous process as quickly as possible. This requires fast response times and must override the operations which are currently being executed. Therefore, this mechanism needs to be separated from the normal machine control and high level services as it needs to be available even when other parts of the system are malfunctioning.
+  </p>
+<p style="font-weight:bold">
+Therefore:<br />
+Divide the system into separate levels according to real-time requirements: e.g. to machine control and to machine operator level. Real-time functionalities are located on the machine control level and non-real-time functionality on the machine operator level. Levels can not interfere with each other as they use message bus or other medium to communicate with each other.
+</p>
+  </div>
