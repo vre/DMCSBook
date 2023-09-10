@@ -17,219 +17,225 @@ permalink: /contents/
   </div>
 </section>
 
-<h2>An example pattern from the book</h2>
-<p>
- Read <a href="{{ site.baseurl }}/examplepattern.html">an example pattern from the book: Separate Real-time</a>
-</p>
-
-
-
 <div class="container">
-  <h1>Table of Contents</h1>
-    <ol class="toc-list">
-  <li>Foreword</li>
-  <li>Acknowledgements</li>
-  <li>Table of Contents</li>
-  <li>Setting the Landscape</li>
-  <ol role="list">  
-  <li>Why to Read This Book?</li>
-  <li>How to Use This Book</li>
-  <li>Comparison with Previous Works</li>
-  </ol>
-  <li>Domain of Distributed Control Systems</li>
-  <ol role="list">   
-  <li>Characteristics of Distributed Control Systems</li>
-  <ol role="list">
-    <li>Long Life Cycle</li>
-    <li>Distribution</li>
-    <li>Functional Safety</li>
-  </ol>
-  <li>Safety-related Aspects in Distributed Control Systems</li>
+
+  <h1>An Example Pattern from the Book</h1>
+  <p>
+    Read an example pattern from the book: <a href="{{ site.baseurl }}/examplepattern.html">Separate Real-time</a>
+  </p>
+
+  <h1>Graph of the Pattern Language</h1>
+  <p>
+    Each pattern when applied has its own positive and negative consequences. Some of these consequences and new arising problems can be alleviated by applying more advanced patterns. The sequence in which the patterns can be applied after each other forms a network or graph. A Graph is a powerful way to navigate between the patterns. The graph is available <a href="{{ site.baseurl }}/img/pattern_lang_final.pdf">here</a>
+  </p>
   
-  <ol role="list">  
-    <li>Real-time Behavior</li>
-    <li>Fault Tolerance</li>
-  </ol>
-  <li>Common Approaches and Challenges</li>
-  <ol role="list">    
-    <li>Agile Development in the Control System Domain</li>
-    <li>Testing and Simulation</li>
-    <li>Product Lines</li>
-    <li>Documentation</li>
-    <li>Technologies</li>
-  <ol role="list">  
-      <li>Data-Centric Middleware: Data Distribution Service (DD)S for Real-Time Systems</li>
-  </ol>
-    <li>Common Pitfalls</li>
-    <li>Tackling the Challenges</li>
-  </ol>
-  <li>New Trends in the Domain</li>
-  <ol role="list">  
-    <li>Orchestrating Multiple Machines</li>
-    <li>Service as Business</li>
-    <li>Autonomous and Intelligent Machines</li>
-    <li>Openness for 3rd Party Software</li>
-    <li>Energy Consumption and Eco-Efficiency</li> 
-    <li>Information Security</li>
-  </ol></ol>
-  <li>Software Architecture and Quality</li>
-  <ol role="list">   
-  <li>What Is Quality?</li>
-  <li>Quality Attributes</li>
-  <li>Measuring Quality</li>
-  <li>External Quality and Internal Quality</li> 
-  </ol>
+  <h1>Table of Contents of the Book</h1>
+  <ol class="toc-list">
+    <li>Foreword</li>
+    <li>Acknowledgements</li>
+    <li>Table of Contents</li>
+    <li>Setting the Landscape</li>
+    <ol role="list">  
+      <li>Why to Read This Book?</li>
+      <li>How to Use This Book</li>
+      <li>Comparison with Previous Works</li>
+    </ol>
+    <li>Domain of Distributed Control Systems</li>
+    <ol role="list">   
+      <li>Characteristics of Distributed Control Systems</li>
+      <ol role="list">
+        <li>Long Life Cycle</li>
+        <li>Distribution</li>
+        <li>Functional Safety</li>
+      </ol>
+      <li>Safety-related Aspects in Distributed Control Systems</li>
+      <ol role="list">  
+        <li>Real-time Behavior</li>
+        <li>Fault Tolerance</li>
+      </ol>
+      <li>Common Approaches and Challenges</li>
+      <ol role="list">    
+        <li>Agile Development in the Control System Domain</li>
+        <li>Testing and Simulation</li>
+        <li>Product Lines</li>
+        <li>Documentation</li>
+        <li>Technologies</li>
+        <ol role="list">  
+            <li>Data-Centric Middleware: Data Distribution Service (DD)S for Real-Time Systems</li>
+        </ol>
+        <li>Common Pitfalls</li>
+        <li>Tackling the Challenges</li>
+      </ol>
+      <li>New Trends in the Domain</li>
+      <ol role="list">  
+        <li>Orchestrating Multiple Machines</li>
+        <li>Service as Business</li>
+        <li>Autonomous and Intelligent Machines</li>
+        <li>Openness for 3rd Party Software</li>
+        <li>Energy Consumption and Eco-Efficiency</li> 
+        <li>Information Security</li>
+      </ol>
+    </ol>
+      <li>Software Architecture and Quality</li>
+    <ol role="list">   
+      <li>What Is Quality?</li>
+      <li>Quality Attributes</li>
+      <li>Measuring Quality</li>
+      <li>External Quality and Internal Quality</li> 
+    </ol>
     <li>About Patterns</li>
-  <ol role="list">    
-  <li>Patterns – What Are They?</li>
-  <li>From Patterns to Pattern Language</li> 
-  <li>The Story of the Patterns in This Book</li>
-  <li>The Pattern Format Used in This Book</li>
-  </ol>
-  <li>Pattern Language for Distributed Control Systems </li>
-  <ol role="list">    
-    <li>Control System **</li>
-    <li>Watchdog **</li>
-    <li>Self-tests *</li>
-    <li>Forced Input Value</li>
-    <li>Error Counter *</li>
-  </ol>
-  <li>Patterns for Distribution</li>
-  <ol role="list">    
-    <li>Isolated Functionalities **</li>
-    <li>Distributed Safety *</li>
-    <li>Heartbeat **</li>
-    <li>Global Time *</li>
-  </ol>
-  <li>Messaging Patterns</li>
-  <ol role="list">    
-    <li>One to Many **</li>
-    <li>High Level Protocol **</li>
-    <li>Messaging Interface *</li>
-    <li>Protocol Version Handshake</li> 
-    <li>Message Queue **</li>
-    <li>Categorized Messages **</li> 
-    <li>Message Channel Multiplexing *</li>
-    <li>Message Gateway **</li>
-    <li>Vector Clock for Messages *</li> 
-    <li>Unique Confirmation</li>
-  </ol>  
-  <li>Event Handling Patterns</li>
-  <ol role="list">  
-    <li>Notifications *</li>
-    <li>Notification Levels **</li>
-    <li>Notification Logging *</li> 
-    <li>Early Warning **</li>
-  </ol>
-  <li>Patterns for Control System Modes</li>
-  <ol role="list"> 
-    <li>Operating Modes **</li> 
-    <li>Safe State **</li>
-    <li>Limp Home *</li> 
-    <li>Sensor Bypass *</li>
-    <li>Devil May Care * </li>
-    <li>Interchangeable Algorithm *</li>
-  </ol>
-  <li>Patterns for Data Management</li>
-  <ol role="list"> 
-    <li>Variable Manager ** </li>
-    <li>Variable Guard * </li>
-    <li>Variable Value Translator</li> 
-    <li>Data Status</li> 
-    <li>Counters *</li> 
-    <li>Snapshot *</li>
-  </ol>
-  <li>Patterns to Handle Scarce Resources</li>
-   <ol role="list">  
-    <li>Concurrent Execution **</li>
-    <li>Static Scheduling **</li>
-    <li><a href="{{ site.baseurl }}/examplepattern.html">Separate Real-time **</a></li>
-    <li>Partial Results</li>
-    <li>Static Resource Allocation **</li> 
-    <li>Locker Key *</li>
-    <li>Half Tasks *</li> 
-    <li>Early work *</li>
-   </ol>
-  <li>Patterns Decoupling Software and Hardware</li>
-  <ol role="list"> 
-    <li>Hardware Abstraction Layer * *</li> 
-    <li>Operating System Abstraction *</li>
-    <li>Virtual Runtime Environment * *  a.k.a VIRTUAL MACHINE</li> 
-    <li>Redundancy Patterns </li>
-    <li>1+1 Redundancy **</li>
-    <li>Voting *</li>
-  </ol>
-  <li>Patterns for System Start-up</li>
-   <ol role="list">  
-    <li>Bootstrapper **</li> 
-    <li>System Start-up **</li> 
-    <li>Start-up Negotiation</li>
-   </ol>
-  <li>Software Update Patterns</li>
-     <ol role="list"> 
-    <li>Updateable Software * *</li> 
-    <li>Centralized Updater *</li>
-    <li>Bumpless Updater</li>
-     </ol>
-  <li>Human-Machine Interface Patterns</li>
-  <ol role="list">      
-    <li>Human-Machine Interface * *</li>
-    <li>Artificial Feedback * *</li> 
-    <li>Two-step Confirmation *</li> 
-    <li>Upright is OK *</li>
-    <li>Task-based UI *</li>
-    <li>Role-based UI * *</li>
-    <li>Alternative Operating Station *</li>
-    <li>Multiple Operating Stations *</li> 
-    <li>Appliance-Provided UI *</li>
-    <li>Beacon *</li>
-    <li>HMI Notifications</li> 
-    <li>Operator Profile * *</li>
-    <li>Common Look-and-Feel *</li> 
-  </ol>
-  <li>High Level Services Patterns</li>
+    <ol role="list">    
+      <li>Patterns – What Are They?</li>
+      <li>From Patterns to Pattern Language</li> 
+      <li>The Story of the Patterns in This Book</li>
+      <li>The Pattern Format Used in This Book</li>
+    </ol>
+      <li>Pattern Language for Distributed Control Systems </li>
+    <ol role="list">    
+      <li>Control System **</li>
+      <li>Watchdog **</li>
+      <li>Self-tests *</li>
+      <li>Forced Input Value</li>
+      <li>Error Counter *</li>
+    </ol>
+    <li>Patterns for Distribution</li>
+    <ol role="list">    
+      <li>Isolated Functionalities **</li>
+      <li>Distributed Safety *</li>
+      <li>Heartbeat **</li>
+      <li>Global Time *</li>
+    </ol>
+    <li>Messaging Patterns</li>
+    <ol role="list">    
+      <li>One to Many **</li>
+      <li>High Level Protocol **</li>
+      <li>Messaging Interface *</li>
+      <li>Protocol Version Handshake</li> 
+      <li>Message Queue **</li>
+      <li>Categorized Messages **</li> 
+      <li>Message Channel Multiplexing *</li>
+      <li>Message Gateway **</li>
+      <li>Vector Clock for Messages *</li> 
+      <li>Unique Confirmation</li>
+    </ol>  
+    <li>Event Handling Patterns</li>
+    <ol role="list">  
+      <li>Notifications *</li>
+      <li>Notification Levels **</li>
+      <li>Notification Logging *</li> 
+      <li>Early Warning **</li>
+    </ol>
+    <li>Patterns for Control System Modes</li>
+    <ol role="list"> 
+      <li>Operating Modes **</li> 
+      <li>Safe State **</li>
+      <li>Limp Home *</li> 
+      <li>Sensor Bypass *</li>
+      <li>Devil May Care * </li>
+      <li>Interchangeable Algorithm *</li>
+    </ol>
+    <li>Patterns for Data Management</li>
+    <ol role="list"> 
+      <li>Variable Manager ** </li>
+      <li>Variable Guard * </li>
+      <li>Variable Value Translator</li> 
+      <li>Data Status</li> 
+      <li>Counters *</li> 
+      <li>Snapshot *</li>
+    </ol>
+    <li>Patterns to Handle Scarce Resources</li>
+    <ol role="list">  
+      <li>Concurrent Execution **</li>
+      <li>Static Scheduling **</li>
+      <li><a href="{{ site.baseurl }}/examplepattern.html">Separate Real-time **</a></li>
+      <li>Partial Results</li>
+      <li>Static Resource Allocation **</li> 
+      <li>Locker Key *</li>
+      <li>Half Tasks *</li> 
+      <li>Early work *</li>
+    </ol>
+    <li>Patterns Decoupling Software and Hardware</li>
+    <ol role="list"> 
+      <li>Hardware Abstraction Layer * *</li> 
+      <li>Operating System Abstraction *</li>
+      <li>Virtual Runtime Environment * *  a.k.a VIRTUAL MACHINE</li> 
+      <li>Redundancy Patterns </li>
+      <li>1+1 Redundancy **</li>
+      <li>Voting *</li>
+    </ol>
+    <li>Patterns for System Start-up</li>
+    <ol role="list">  
+      <li>Bootstrapper **</li> 
+      <li>System Start-up **</li> 
+      <li>Start-up Negotiation</li>
+    </ol>
+    <li>Software Update Patterns</li>
+    <ol role="list"> 
+      <li>Updateable Software * *</li> 
+      <li>Centralized Updater *</li>
+      <li>Bumpless Updater</li>
+    </ol>
+    <li>Human-Machine Interface Patterns</li>
+    <ol role="list">      
+      <li>Human-Machine Interface * *</li>
+      <li>Artificial Feedback * *</li> 
+      <li>Two-step Confirmation *</li> 
+      <li>Upright is OK *</li>
+      <li>Task-based UI *</li>
+      <li>Role-based UI * *</li>
+      <li>Alternative Operating Station *</li>
+      <li>Multiple Operating Stations *</li> 
+      <li>Appliance-Provided UI *</li>
+      <li>Beacon *</li>
+      <li>HMI Notifications</li> 
+      <li>Operator Profile * *</li>
+      <li>Common Look-and-Feel *</li> 
+    </ol>
+    <li>High Level Services Patterns</li>
     <ol role="list">
       <li>Diagnostics *</li>
-    <li>Blackbox</li>
-    <li>Third-party Sandbox *</li>
-    <li>Remote Access *</li> 
-    <li>Dynamic Message Channel Selector *</li> 
+      <li>Blackbox</li>
+      <li>Third-party Sandbox *</li>
+      <li>Remote Access *</li> 
+      <li>Dynamic Message Channel Selector *</li> 
     </ol>
-  <li>Fleet Management Patterns</li>
-   <ol role="list"> 
-    <li>Fleet Management *</li>
-    <li>M2M Communication </li>
-    <li>Opportunistic Delegation</li>
-    <li>System Adapter * </li>
-   </ol>
-  <li>Patterns for System Configuration</li> 
-  <ol role="list">
-       <li>Parameters * *</li>
-     <li>Configuration Parameter Versions</li> 
-     <li>Component-based Configuration *</li>
-     <li>Control System Options *</li>
-  </ol>
+    <li>Fleet Management Patterns</li>
+    <ol role="list"> 
+      <li>Fleet Management *</li>
+      <li>M2M Communication </li>
+      <li>Opportunistic Delegation</li>
+      <li>System Adapter * </li>
+    </ol>
+    <li>Patterns for System Configuration</li> 
+    <ol role="list">
+      <li>Parameters * *</li>
+      <li>Configuration Parameter Versions</li> 
+      <li>Component-based Configuration *</li>
+      <li>Control System Options *</li>
+    </ol>
     <li>Applying Patterns</li>
     <li>Concluding Remarks</li> 
     <li>Appendix</li>
     <ol role="list">
-    <li> Quality Attribute Table</li>
-    <li>Patlets</li> 
-    <li>Glossary</li>
-    <li>References</li>
+      <li> Quality Attribute Table</li>
+      <li>Patlets</li> 
+      <li>Glossary</li>
+      <li>References</li>
     </ol>
   </ol>
+  
 </div>
   
 <div class="container">
+  <h1>ISBN and Other Details</h1>
+  
   <ol class="toc-list">
-  <li>ISBN-10 9781118694152</li>
-  <li>ISBN-13 978-1118694152</li>
-  <li>1st Edition</li>
-  <li>Publisher Wiley</li>
-  <li>Published June 9, 2014</li>
-</div>
-
-<div>
+    <li>ISBN-10 9781118694152</li>
+    <li>ISBN-13 978-1118694152</li>
+    <li>1st Edition</li>
+    <li>Publisher Wiley</li>
+    <li>Published June 9, 2014</li>
+  </ol>
   <p>Cite: <i>Eloranta, Veli-Pekka; Koskinen, Johannes; Leppänen, Marko; Reijonen, Ville (2014). Designing distributed control systems: a pattern language approach. ISBN: 978-1-118-69415-2 Wiley series in software design patterns. John Wiley and Sons. </i></p>
+
 </div>
