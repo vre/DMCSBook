@@ -23,24 +23,24 @@ permalink: /contact/
     <div class="row">
       <div class="col-md-6 col-sm-12">
         <div class="block">
-          <form>
+          <form action="https://getform.io/f/b6425a20-85bf-4106-9f2c-bf4b97e4672b" method="POST">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Your Name">
+              <input type="text" class="form-control" name="name" placeholder="Your Name">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Email Address">
+              <input type="text" class="form-control" name="email" placeholder="Email Address">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Subject">
+              <input type="text" class="form-control" name="subject" placeholder="Subject">
+              <input type="hidden" name="_gotcha" style="display:none !important">
             </div>
-          </form>
         </div>
       </div>
       <div class="col-md-6 col-sm-12">
         <div class="block">
-          <form>
             <div class="form-group-2">
-              <textarea class="form-control" rows="3" placeholder="Your Message"></textarea>
+              <textarea class="form-control" name="message" rows="3" placeholder="Your Message"></textarea>
+              <br>
             </div>
             <button class="btn btn-default" type="submit">Send Message</button>
           </form>
@@ -50,6 +50,7 @@ permalink: /contact/
 
   </div>
 </section>
+
 <!-- Call to action Start -->
 <section id="call-to-action">
   <div class="container">
