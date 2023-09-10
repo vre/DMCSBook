@@ -1,8 +1,14 @@
-# Airspace Jekyll
+# DMCS Book Website
 
-Airspace Jekyll Creative Agency Template ported from [Airspace HTML Template](https://themefisher.com/products/airspace/)
+This repo contains the files needed for creation and hosting a web page on GitHub pages.
+The domain has been bought separately and A and AAAA records are pointing to github as the gh's guide instructed. 
+In GH repo settings Github Pages has been to use the dmcsbook.com as the address.
 
-![airspace](https://demo.themefisher.com/thumbnails/airspace.png)
+The development of the content has been done in collaboration using replit.com where a Jekyll can be run so that multiple developers can edit the same simultanously. The Jekyll theme is Airspace Jekyll from [Airspace HTML Template](https://themefisher.com/products/airspace/)
+
+Content Copyright: DMCS Pattern Authors
+
+# Airspace Readme content follows
 
 ## Setup
 
@@ -48,5 +54,4 @@ If you have questions or need help integrating the product please [contact us](m
 Copyright (c) 2016 - Present, Designed & Developed by [Themefisher](https://themefisher.com)
 
 **Code License:** Released under the [MIT](https://github.com/themefisher/airspace-jekyll/blob/main/LICENSE) license.
-
 **Image license:** The images are only for demonstration purposes. They have their license, we don't have permission to share those images.
